@@ -23,7 +23,7 @@ Add the resources to your application.js file
 ```coffeescript
 
 # app/assets/javascripts/application.js
-//= require videojs
+//= require video
 
 ```
 
@@ -33,8 +33,7 @@ You can optionally include skins by requiring in app/assets/stylesheets/applicat
 
 /*
 *= require_self
-*= require videojs
-*= require skins/hu.css
+*= require video-js
 */
 
 ```
@@ -45,7 +44,7 @@ _currently not working_
 
 ```erb
 
-<%= videojs_rails source: "http://domain.com/path/to/video.mp4", width:"400px" %>
+<%= videojs_rails source: "http://domain.com/path/to/video", types: [:mp4, :webm], width:"400px" %>
 
 ```
 
