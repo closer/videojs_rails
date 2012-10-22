@@ -1,9 +1,8 @@
 <!-- Begin VideoJS -->
 <div class="video-js-box">
-  <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
   <video id="<%=@options[:id]%>" class="<%= @options[:classes] %> video-js" width="<%=@options[:width]%>" height="<%=@options[:height]%>" controls="controls" preload="auto">
 
-    <% @optioins[:types].each do |type| %>
+    <% @options[:types].each do |type| %>
       <source src="<%=@options[:source]%>.<%=type%>" type='video/<%=type%>' />
     <% end %>
 
