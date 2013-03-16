@@ -1,12 +1,13 @@
 <!-- Begin VideoJS -->
-<div class="video-js-box">
-  <video id="<%=@options[:id]%>" class="<%= @options[:classes] %> video-js" width="<%=@options[:width]%>" height="<%=@options[:height]%>" controls="controls" preload="auto">
-
+<video id="<%=@options[:id]%>" 
+       class="<%= @options[:classes] %>"
+       controls preload="<%= @options[:preload] %>"
+       width="<%= @options[:width] %>" height="<%= @options[:height] %>"
+       data-setup="<%= @options[:data_setup] %>"
+       <%= "poster=#{@options[:poster]}" unless @options[:poster] == "" %>
+       >
     <% @options[:types].each do |type| %>
       <source src="<%=@options[:source]%>.<%=type%>" type='video/<%=type%>' />
     <% end %>
-
   </video>
-
-</div>
 <!-- End VideoJS -->
